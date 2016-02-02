@@ -1,0 +1,140 @@
+/* line 1, ../sass/_main.scss */
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+/* line 5, ../sass/_main.scss */
+body {
+  min-width: 960px;
+  margin: 0;
+  background-color: #f3f3f3;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  color: #333333;
+}
+/* line 13, ../sass/_main.scss */
+body .page-header {
+  background-color: #76c7c0;
+  content: "";
+  text-align: center;
+  line-height: 1rem;
+  padding: 0.7rem;
+}
+/* line 21, ../sass/_main.scss */
+body h1 {
+  font-size: 1.475rem;
+  color: white;
+  padding: 1.875rem;
+}
+/* line 27, ../sass/_main.scss */
+body h2 {
+  margin-top: 0;
+  color: white;
+  font-size: 1.175rem;
+}
+/* line 31, ../sass/_main.scss */
+body input {
+  border: 1px solid #c8c8c8;
+  border-radius: 0.15rem;
+}
+/* line 36, ../sass/_main.scss */
+body label {
+  margin-right: 0.225em;
+}
+/* line 40, ../sass/_main.scss */
+body button {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  display: inline-block;
+  margin: 0.125rem;
+  text-align: center;
+  border: 0.0625rem solid #dbdbdb;
+  border-radius: 0.225em;
+  padding: 0.2rem 0.4rem;
+  background-color: #76caca;
+}
+/* line 30, ../sass/_settings.scss */
+body button:hover {
+  background-color: #59bfbf;
+}
+/* line 33, ../sass/_settings.scss */
+body button:active {
+  background-color: #368b8b;
+}
+/* line 52, ../sass/_main.scss */
+body button:disabled {
+  background-color: #eee !important;
+  color: #dbdbdb;
+}
+/* line 57, ../sass/_main.scss */
+body button.main {
+  padding: 0.3em 0.8em;
+  background-color: #e8645a;
+}
+/* line 30, ../sass/_settings.scss */
+body button.main:hover {
+  background-color: #e34236;
+}
+/* line 33, ../sass/_settings.scss */
+body button.main:active {
+  background-color: #ab2218;
+}
+/* line 62, ../sass/_main.scss */
+body .container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.75rem 1.875rem;
+}
+/* line 67, ../sass/_main.scss */
+body .container #student-form {
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.525rem 0 0.525rem 1.5rem;
+  -webkit-margin-after: 1.5rem;
+}
+/* line 73, ../sass/_main.scss */
+body .container #student-form h2 {
+  margin-top: 0;
+  color: #333333;
+  font-size: 1.175rem;
+}
+/* line 79, ../sass/_main.scss */
+body .container #student-form .error input {
+  border: 0.0625rem solid #c00;
+}
+/* line 83, ../sass/_main.scss */
+body .container #student-form .error-text {
+  display: none;
+  font-size: 0.675rem;
+  color: #c00;
+  margin-left: 0.225rem;
+}
+/* line 90, ../sass/_main.scss */
+body .container #student-form .error .error-text {
+  display: inline-block;
+}
+/* line 95, ../sass/_main.scss */
+body .container #students-table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+/* line 100, ../sass/_main.scss */
+body .container #students-table thead tr:nth-child(2) th {
+  border-bottom: 0.13rem solid #dbdbdb;
+  padding: 0.225rem 0;
+}
+/* line 105, ../sass/_main.scss */
+body .container #students-table th, body .container #students-table td {
+  text-align: center;
+  border: none;
+  background-color: white;
+  padding: 0.375rem 0.375rem;
+}
+/* line 112, ../sass/_main.scss */
+body .container #students-table th:hover {
+  color: #696969;
+}

@@ -1,0 +1,41 @@
+$bg-color: #f3f3f3;
+$header-bg-color: #76c7c0;
+$table-bg-color: #fff;
+$main-btn-color: #76caca;
+$main-border-color: #dbdbdb;
+
+$main-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
+$main-font-size: 0.875rem;
+$main-font-color: #333;
+$header-font-color: #fff;
+
+$h1-font-size: $main-font-size + 0.6;
+$h2-font-size: $main-font-size + 0.3;
+
+$default-padding: 1.875rem;
+$default-margin: 0;
+$border: 0.0625rem solid $main-border-color;
+
+$min-width: 960px;
+
+@mixin make-h2 ($default-margin, $header-font-color, $h2-font-size) {
+	margin-top: $default-margin;
+	color: $header-font-color;
+	font-size: $h2-font-size;
+}
+
+@mixin make-btn ($default-padding, $bg-color) {
+	padding: $default-padding;
+	background-color: $bg-color;
+	&:hover {
+		background-color: darken($bg-color, 8%);
+	}
+	&:active {
+		background-color: darken($bg-color, 25%);
+	}
+}
+
+
+
+
+

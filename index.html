@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>students</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/app.css" type="text/css">
+	<!-- <link rel="stylesheet" href="css/normalize.css" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+<!-- 	<link rel="stylesheet" href="css/main.css" type="text/css"> -->
+</head>
+<body>
+	<header class="page-header">
+		<h1>Welcome to Our University Page</h1>
+		<h2>We missed you a lot.</h2>
+	</header>
+	<div class="container">	
+		<form id="student-form" >
+			<h2>Please fill in the form fileds</h2>
+			<p><label for="name">Name</label><input id="name" name="name" type="text" data-validate="notEmpty:true, text:true"/></p>
+			<p><label for="date">Date</label><input placeholder="yyyy-mm-dd" id="date" name="date" type="text" data-validate="notEmpty:true, date:true"/></p>
+			<p><label for="age">Age</label><input id="age" name="age" data-validate="notEmpty:true, min:16, max:120, number:true"/></p>
+			<p><label for="rate">Rate</label><input id="rate" name="rate" data-validate="notEmpty:true, min:0, max:100, number:true"></p>
+			<button class="main save" type="submit">Save</button>
+			<button class="main save-changes btn-lg" type="button" disabled>Save Changes</button>
+		</form>
+		<table id="students-table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Name
+						<a href="#"><i class="fa fa-sort-desc name"></i></a>
+						<a href="#"><i class="fa fa-sort-asc name"></i></a>
+						<button class="sort-cancel" type="button" disabled>undo</button>
+					</th>
+
+					<th>Date
+						<a href="#"><i class="fa fa-sort-desc date"></i></a>
+						<a href="#"><i class="fa fa-sort-asc date"></i></a>
+						<button class="sort-cancel" type="button" disabled>undo</button>
+					</th>
+					<th>Age
+						<a href="#"><i class="fa fa-sort-desc age"></i></a>
+						<a href="#"><i class="fa fa-sort-asc age"></i></a>
+						<button class="sort-cancel" type="button" disabled>undo</button>
+					</th>
+					<th>Rate
+						<a href="#"><i class="fa fa-sort-desc rate"></i></a>
+						<a href="#"><i class="fa fa-sort-asc rate"></i></a>
+						<button class="sort-cancel" type="button" disabled>undo</button>
+					</th>
+					<th>Actions</th>
+				</tr>
+				<tr>
+					<form id="filter">
+					<th></th>
+					<th><input name="name" type="text" autocomplete="off"></th>
+					<th><input id="date" name="date" type="date"></th>
+					<th><input id="age" name="age" type="number" min="16" max="120"/></th>
+					<th><input id="rate" name="rate" type="number" min="0" max="100"/></th>
+					<th>
+						<button class="filter btn-med" type="submit">Filter</button>
+						<button class="cancel-filter btn-lg" type="button">Cancel filter</button>
+					</th>
+					</form>
+				</tr>
+			</thead>
+			<tbody id="students-tbody"></tbody>
+		</table>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+<html>
