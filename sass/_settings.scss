@@ -6,6 +6,7 @@ $main-border-color: #dbdbdb;
 
 $main-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
 $main-font-size: 0.875rem;
+$btn-font-size: 0.75rem;
 $main-font-color: #333;
 $header-font-color: #fff;
 
@@ -16,7 +17,7 @@ $default-padding: 1.875rem;
 $default-margin: 0;
 $border: 0.0625rem solid $main-border-color;
 
-@mixin make-h2 ($default-margin, $header-font-color, $h2-font-size) {
+@mixin make-h ($default-margin, $header-font-color, $h2-font-size) {
 	margin-top: $default-margin;
 	color: $header-font-color;
 	font-size: $h2-font-size;
