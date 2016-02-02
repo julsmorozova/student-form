@@ -3,7 +3,7 @@
 }
 
 body {
-	min-width: $min-width;
+	width: 100%;
 	margin: 0;
 	background-color: $bg-color;
 	font-family: $main-font;
@@ -68,7 +68,7 @@ body {
 			background-color: $table-bg-color;
 			width: 90%;
 			margin: 0 auto;
-			padding: 0.525rem 0 0.525rem 1.5rem;
+			padding: 3%;
 
 			h2 {
 				@include make-h2($default-margin, $main-font-color, $h2-font-size);
@@ -103,11 +103,10 @@ body {
 			}
 
 			th, td {
-			text-align: center;
-			border: none;
-			background-color: $table-bg-color;
-			padding: 0.375rem 0.375rem;
-			
+				text-align: center;
+				border: none;
+				background-color: $table-bg-color;
+				padding: 0.375rem;
 			}
 			th:hover {
 				color: #696969;
