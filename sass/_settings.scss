@@ -1,7 +1,8 @@
-$bg-color: #f3f3f3;
-$header-bg-color: #76c7c0;
+$bg-color: #eee;
+$pink: #cc0966;
+$header-bg-color: #5EB9CC;
 $table-bg-color: #fff;
-$main-btn-color: #76caca;
+$main-btn-color: #5EB9CC;
 $main-border-color: #dbdbdb;
 
 $main-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -33,8 +34,3 @@ $border: 0.0625rem solid $main-border-color;
 		background-color: darken($bg-color, 25%);
 	}
 }
-
-
-
-
-

@@ -16,6 +16,7 @@ body {
 		text-align: center;
 		line-height: 1rem;
 		padding: 0.7rem;
+		margin-top: -0.45rem;
 	}
 
 	h1 {
@@ -56,8 +57,7 @@ body {
 		}
 
 		&.main {
-			@include make-btn(0.3em 0.8em, #e8645a);
+			@include make-btn(0.3em 0.8em, $pink);
 		}
 	}
 }
-
