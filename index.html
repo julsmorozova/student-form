@@ -15,7 +15,7 @@
 		<h1>Welcome to Our University Page</h1>
 		<h2>We missed you a lot.</h2>
 	</header>
-	<div class="container">	
+	<div class="container">
 		<form id="student-form" >
 			<h2>Please fill in the form fileds</h2>
 			<p><label for="name">Name</label><input id="name" name="name" type="text" data-validate="notEmpty:true, text:true"/></p>
@@ -30,25 +30,25 @@
 				<tr>
 					<th>#</th>
 					<th>Name
-						<a href="#"><i class="fa fa-sort-desc name"></i></a>
-						<a href="#"><i class="fa fa-sort-asc name"></i></a>
-						<button class="sort-cancel" type="button" disabled>undo</button>
+						<a href="#"><i class="fa fa-sort-desc" data-sort="field:'name', type:'string', desc:true"></i></a>
+						<a href="#"><i class="fa fa-sort-asc" data-sort="field:'name', type:'string'"></i></a>
+						<button class="sort-cancel" data-field="name" type="button" disabled>undo</button>
 					</th>
 
 					<th>Date
-						<a href="#"><i class="fa fa-sort-desc date"></i></a>
-						<a href="#"><i class="fa fa-sort-asc date"></i></a>
-						<button class="sort-cancel" type="button" disabled>undo</button>
+						<a href="#"><i class="fa fa-sort-desc" data-sort="field:'date', type:'string', desc:true"></i></a>
+						<a href="#"><i class="fa fa-sort-asc" data-sort="field:'date', type:'string'"></i></a>
+						<button class="sort-cancel" data-field="date" type="button" disabled>undo</button>
 					</th>
 					<th>Age
-						<a href="#"><i class="fa fa-sort-desc age"></i></a>
-						<a href="#"><i class="fa fa-sort-asc age"></i></a>
-						<button class="sort-cancel" type="button" disabled>undo</button>
+						<a href="#"><i class="fa fa-sort-desc" data-sort="field:'age', type:'number', desc:true"></i></a>
+						<a href="#"><i class="fa fa-sort-asc" data-sort="field:'age', type:'number'"></i></a>
+						<button class="sort-cancel" data-field="age" type="button" disabled>undo</button>
 					</th>
 					<th>Rate
-						<a href="#"><i class="fa fa-sort-desc rate"></i></a>
-						<a href="#"><i class="fa fa-sort-asc rate"></i></a>
-						<button class="sort-cancel" type="button" disabled>undo</button>
+						<a href="#"><i class="fa fa-sort-desc" data-sort="field:'rate', type:'number', desc:true"></i></a>
+						<a href="#"><i class="fa fa-sort-asc" data-sort="field:'rate', type:'number'"></i></a>
+						<button class="sort-cancel" data-field="rate" type="button" disabled>undo</button>
 					</th>
 					<th>Actions</th>
 				</tr>
@@ -69,6 +69,6 @@
 			<tbody id="students-tbody"></tbody>
 		</table>
 	</div>
-	<script src="js/app.js"></script>
+	<script src="compiled/all.js"></script>
 </body>
 <html>
