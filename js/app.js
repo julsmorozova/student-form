@@ -45,7 +45,7 @@
 //             setStudentsToStorage(studentList);
 //         });
 //         actionTd.appendChild(removeButton);
-        
+
 //         var editButton = document.createElement('button');
 //         editButton.textContent = 'Edit';
 //         editButton.addEventListener('click', function edit () {
@@ -60,7 +60,7 @@
 
 // function renderList (list) {
 //     studentTbody.innerHTML = '';
-//     list.forEach(function (student, index) { 
+//     list.forEach(function (student, index) {
 //         studentTbody.appendChild(student.render(index));
 //     });
 // }
@@ -124,17 +124,17 @@
 // function setSortEvent (el, params) {
 //     el.addEventListener('click', function (e) {
 //         e.preventDefault();
-//         var newList = studentList.slice(0);  
-//         newList = newList.sort(sortByField(newList, params.field, params.type, params.desc));  
+//         var newList = studentList.slice(0);
+//         newList = newList.sort(sortByField(newList, params.field, params.type, params.desc));
 //         renderList(newList);
 //         enableUndoSortButton(params.field);
 //     });
-// } 
+// }
 
 // function enableUndoSortButton (field) {
 //     for (var i = 0, ln = sortCancelButton.length; i < ln; i++) {
 //         sortCancelButton[i].disabled = sortCancelButton[i].dataset.field !== field;
-//     } 
+//     }
 // }
 
 // //CANCEL SORTING
@@ -147,45 +147,46 @@
 // function FormValidator (form) {
 
 //     this.fields = [];
-
-//     this.parseRules = function () {
-//         for (var i = 0, ln = form.elements.length; i < ln; i++) {
-//             if (form.elements[i].dataset.validate) {
-//                 var parentEl = form.elements[i].parentNode;
-//                 var errorEl = document.createElement('div');
-//                 errorEl.classList.add('error-text');
-//                 parentEl.appendChild(errorEl);
-//                 this.fields.push({
-//                     element: form.elements[i],
-//                     parentEl: parentEl,
-//                     errorEl: errorEl,
-//                     rules: eval('({' + form.elements[i].dataset.validate + '})'),
-//                 });                    
-//             }
-//         }
-//     };
-
-//     this.validate = function (submit) {
-//         var formValid = true;
-//         this.fields.forEach((field) => {
-//             var value = field.element.value;
-//             if (value !== '' || submit === true) {
-//                 var fieldValid = true;
-//                 field.errorEl.textContent = '';
-//                 for (var i in field.rules) {
-//                     var validationResult = this[i](value, field.rules[i]);
-//                     if (typeof(validationResult) === 'string') {
-//                         formValid = false;
-//                         fieldValid = false;
-//                         field.errorEl.textContent = validationResult;
-//                         break;
-//                     } 
-//                 }
+    //
+    // this.parseRules = function () {
+    //     for (var i = 0, ln = form.elements.length; i < ln; i++) {
+    //         if (form.elements[i].dataset.validate) {
+    //             var parentEl = form.elements[i].parentNode;
+    //             var errorEl = document.createElement('div');
+    //             errorEl.classList.add('error-text');
+    //             parentEl.appendChild(errorEl);
+    //             this.fields.push({
+    //                 element: form.elements[i],
+    //                 parentEl: parentEl,
+    //                 errorEl: errorEl,
+    //                 rules: eval('({' + form.elements[i].dataset.validate + '})'),
+    //             });
+    //         }
+    //     }
+    // };
+    //
+    // this.validate = function (submit) {
+    //     var formValid = true;
+    //     var my = this;
+    //     this.fields.forEach(function (field) {
+    //         var value = field.element.value;
+    //         if (value !== '' || submit === true) {
+    //             var fieldValid = true;
+    //             field.errorEl.textContent = '';
+    //             for (var i in field.rules) {
+    //                 var validationResult = my[i](value, field.rules[i]);
+    //                 if (typeof(validationResult) === 'string') {
+    //                     formValid = false;
+    //                     fieldValid = false;
+    //                     field.errorEl.textContent = validationResult;
+    //                     break;
+    //                 }
+    //             }
 //                 if (fieldValid) {
 //                     field.parentEl.classList.remove('error');
 //                 } else {
-//                     field.parentEl.classList.add('error');             
-//                 }    
+//                     field.parentEl.classList.add('error');
+//                 }
 //             }
 //         });
 //         return formValid;
@@ -202,7 +203,7 @@
 //         if (!/^\D+$/.test(value)) {
 //             return 'Should contain only letters.';
 //         }
-//         return true;   
+//         return true;
 //     };
 
 //     this.number = function (value) {
@@ -234,12 +235,12 @@
 //     };
 
 //     this.parseRules();
-// } 
+// }
 
 
 // function addStudent () {
 //     var student = new Student(
-//         formElements.name.value,  
+//         formElements.name.value,
 //         formElements.date.value,
 //         formElements.age.value,
 //         formElements.rate.value
@@ -317,7 +318,7 @@ studentForm.addEventListener('change', function () {
     studentValidator.validate(false);
 });
 
-saveChangesButton.addEventListener('click', editStudent); 
+saveChangesButton.addEventListener('click', editStudent);
 
 for (var i=0, ln = sortCancelButton.length; i < ln; i++) {
     sortCancelButton[i].addEventListener('click', sortCancel);
