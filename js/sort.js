@@ -4,7 +4,7 @@
  * @param {String} field field to be sorted
  * @param {String} type field value type
  * @param {Boolean} desc sort direction
- * @return {Function} Returns result of sorting.
+ * @return {Function} Returns callback for sort function
  */
 function sortByField (list, field, type, desc) {
     return function (a, b) {
