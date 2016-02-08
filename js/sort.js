@@ -1,3 +1,11 @@
+/**
+ * Sorts list by chosen field depending on value type and sort direction.
+ * @param {Students[]} list
+ * @param {String} field field to be sorted
+ * @param {String} type field value type
+ * @param {Boolean} desc sort direction
+ * @return {Function} Returns result of sorting.
+ */
 function sortByField (list, field, type, desc) {
     return function (a, b) {
         var result = 0;
@@ -24,7 +32,12 @@ function sortByField (list, field, type, desc) {
     };
 }
 
-
+/**
+ * Sets sorting event to button
+ * Invokes undoSortButton function
+ * @param {Element} el One of the sortButtons
+ * @param {Object} params Sort criteria
+ */
 function setSortEvent (el, params) {
     el.addEventListener('click', function (e) {
         e.preventDefault();
@@ -35,13 +48,19 @@ function setSortEvent (el, params) {
     });
 }
 
+/**
+ * Enables undoSortButton
+ * @param {Array} list of objects (newList - copy of studentList)
+ */
 function enableUndoSortButton (field) {
     for (var i = 0, ln = sortCancelButton.length; i < ln; i++) {
         sortCancelButton[i].disabled = sortCancelButton[i].dataset.field !== field;
     }
 }
 
-//CANCEL SORTING
+/**
+ * Cancels sorting
+ */
 function sortCancel () {
     renderList(studentList);
     enableUndoSortButton();

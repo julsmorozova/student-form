@@ -1,3 +1,9 @@
+/**
+ * Checks if student's data in table matches user's filter parameters.
+ * Gives back filtered array.
+ * @param {Student} item student from studentList.
+ * @return {Boolean} If student's data in table matches user's filter parameters.
+ */
 function filterByUserParams (item) {
     var filterCases = ['age', 'rate', 'name', 'date'];
     return filterCases.every(function (filterCase) {
