@@ -44,8 +44,8 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest(fontsDest));
 });
 
-//Compile
-gulp.task('compile', function() {
+//Build
+gulp.task('build', function() {
     gulp.start('styles', 'copy-fonts-css', 'fonts', 'compress');
 });
 
